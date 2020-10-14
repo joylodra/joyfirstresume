@@ -1,0 +1,138 @@
+#resume {
+  display: grid;
+  width: 100%;
+  margin: 0;
+
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+      "header"
+      "main"
+      "footer";  
+
+  header {
+  }
+
+  .main-content {
+    #about-me,
+    #resume-content,
+    #projects,
+    #contact-me {
+      width: 100%;
+      padding: 2vh 0 2vh 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #about-me {
+      #about-me-body {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin: 1vh 0 1vh 0;
+
+        @media (max-width: $tablet-break) {
+          width: 90%;
+          display: block;
+        }
+        
+        .about-me-pic {
+          margin-right: 2rem;
+          margin-bottom: 1.5rem;
+
+          @media (max-width: $tablet-break){
+              margin-right: 0rem;
+              text-align: center;
+          }
+
+          .cropped {
+              height: 20rem;
+              width: 20rem;
+              object-fit: cover;
+              border-radius: 50%;
+          }
+        }
+
+        .about-me-desc {
+          margin-top: 1.5rem;
+
+          @media (max-width: $tablet-break){
+            width: 100%;
+            text-align: center;
+
+            h1 { font-size: 25px; }
+            h5 { font-size: 17px; }
+            p { 
+              font-size: 13px; 
+              margin-left: 3rem;
+              margin-right: 3rem;
+            }
+          }
+          
+          .icon-pos {
+            display: flex;
+            @media (max-width: $tablet-break){
+              justify-content: center;
+            }
+          }
+
+          .icon {
+            margin-right: 1rem;
+
+            @media (max-width: $tablet-break){
+              margin-right: 0.5rem;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    #resume-content {
+      background-color: #ebecf0;
+
+      #resume-content-body {
+        width: 70%;
+        margin: 1vh 0 1vh 0;
+        text-align: center;
+        
+        .resume-content-block {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 1.5rem;
+          margin-top: 1.5rem;
+
+          @media (max-width: $tablet-break){
+            display: block;
+            width: 100%;
+          }
+          
+          p {
+            display: flex;
+            justify-content: center;
+            margin-left: 2rem;
+            margin-right: 2rem;
+          }
+        }
+        
+      }
+    }
+
+    #projects {
+      background-color: greenyellow;
+
+      #projects-body {
+        width: 90%;
+        margin: 1vh 0 1vh 0;
+      }
+    }
+
+    #contact-me {
+      background-color: orange;
+
+      #contact-me-body {
+        width: 90%;
+        margin: 1vh 0 1vh 0;
+      }
+    }
+  }
+}

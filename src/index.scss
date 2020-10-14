@@ -1,0 +1,25 @@
+$mobile-break: 700px;
+$tablet-break: 1199px;
+
+@import "./sass/layout.scss";
+@import "./sass/components.scss";
+@import "./sass/typography.scss";
+
+body {
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+  font-size: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
